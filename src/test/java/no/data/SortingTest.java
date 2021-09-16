@@ -1,13 +1,8 @@
 package no.data;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
 public class SortingTest
 {
 
@@ -23,12 +18,4 @@ public class SortingTest
 
     }
 
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
-    }
 }
