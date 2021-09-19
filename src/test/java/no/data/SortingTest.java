@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class SortingTest
@@ -24,6 +25,18 @@ public class SortingTest
     @Test
     public void whenUsingAgeComparator_thenSortedList(){
         Collections.sort(madMen, new AgeComparator());
+        Assert.assertEquals(madMen.get(0).getName(),"Peggy Olson");
+        Assert.assertEquals(madMen.get(2).getName(), "Bert Cooper");
+    }
+
+    @Test
+    public void whenUsingAnonymousComparator_thenSortedList(){
+        Collections.sort(madMen, new Comparator<Person>() {
+            @Override
+            public int compare(Person o1, Person o2) {
+                return Integer.compare(o1.getAge(), o2.getAge());
+            }
+        });
         Assert.assertEquals(madMen.get(0).getName(),"Peggy Olson");
         Assert.assertEquals(madMen.get(2).getName(), "Bert Cooper");
     }
