@@ -23,8 +23,8 @@ public class SortingTest
     }
 
     @Test
-    public void whenUsingAgeComparator_thenSortedList(){
-        Collections.sort(madMen, new AgeComparator());
+    public void whenUsingAscAgeComparator_thenSortedList(){
+        Collections.sort(madMen, new AscAgeComparator());
         Assert.assertEquals(madMen.get(0).getName(),"Peggy Olson");
         Assert.assertEquals(madMen.get(2).getName(), "Bert Cooper");
     }
