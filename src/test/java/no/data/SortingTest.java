@@ -41,4 +41,11 @@ public class SortingTest
         Assert.assertEquals(madMen.get(2).getName(), "Bert Cooper");
     }
 
+    @Test
+    public void whenUsingDescAgeComparator_thenSortedList(){
+        Collections.sort(madMen, new DescAgeComparator());
+        Assert.assertEquals(madMen.get(0).getName(), "Bert Cooper");
+        Assert.assertEquals(madMen.get(madMen.size() - 1).getName(),"Peggy Olson");
+    }
+
 }
