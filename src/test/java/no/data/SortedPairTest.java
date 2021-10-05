@@ -6,6 +6,8 @@ public class SortedPairTest {
 
     @Test
     public void shouldRetainOrderOfOrderedPair(){
+        SortedPair<Integer> pair = new SortedPair<>(1, 2);
+
     }
 
     @Test
