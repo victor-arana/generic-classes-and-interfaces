@@ -2,16 +2,16 @@ package no.data;
 
 import java.util.Comparator;
 
-public class DescComparator implements Comparator<Person> {
+public class DescComparator<T> implements Comparator<T> {
 
-    private final Comparator<Person> ascComparator;
+    private final Comparator<T> ascComparator;
 
-    public DescComparator(Comparator<Person> ascComparator) {
+    public DescComparator(Comparator<T> ascComparator) {
         this.ascComparator = ascComparator;
     }
 
     @Override
-    public int compare(Person o1, Person o2) {
+    public int compare(T o1, T o2) {
         return -1 * ascComparator.compare(o1, o2);
     }
 }
