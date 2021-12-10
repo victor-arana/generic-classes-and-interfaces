@@ -42,8 +42,8 @@ public class SortingTest
     }
 
     @Test
-    public void whenUsingDescAgeComparator_thenSortedList(){
-        Collections.sort(madMen, new DescAgeComparator());
+    public void whenUsingReversedAgeComparator_thenSortedList(){
+        Collections.sort(madMen, (new AgeComparator()).reversed());
         Assert.assertEquals(madMen.get(0).getName(), "Bert Cooper");
         Assert.assertEquals(madMen.get(madMen.size() - 1).getName(),"Peggy Olson");
     }
